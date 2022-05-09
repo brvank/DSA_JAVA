@@ -1,4 +1,4 @@
-package data_structure.linear.LinkedList;
+package data_structure.linear.Stack;
 
 class Node<T>{
     private T data;

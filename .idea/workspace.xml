@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b70215c-7691-4806-9508-0301e8ba93c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DSA.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_structure/linear/Queue/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_structure/linear/Queue/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_structure/linear/Stack/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_structure/linear/Stack/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +43,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
@@ -70,7 +71,9 @@
       <updated>1651682656955</updated>
       <workItem from="1651682676435" duration="2619000" />
       <workItem from="1651725785812" duration="600000" />
-      <workItem from="1651765727609" duration="5010000" />
+      <workItem from="1651765727609" duration="6847000" />
+      <workItem from="1651854402861" duration="26000" />
+      <workItem from="1652114796226" duration="5418000" />
     </task>
     <servers />
   </component>

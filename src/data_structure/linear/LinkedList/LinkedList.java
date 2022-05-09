@@ -141,6 +141,10 @@ public class LinkedList<T>{
         }
     }
 
+    public int length(){
+        return count;
+    }
+
     //to string
     public String toString(){
         StringBuilder stringBuilder = new StringBuilder();
