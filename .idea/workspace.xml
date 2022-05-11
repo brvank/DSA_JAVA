@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b70215c-7691-4806-9508-0301e8ba93c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data_structure/linear/Queue/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_structure/linear/Queue/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_structure/linear/Stack/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_structure/linear/Stack/Stack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/Graph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +68,11 @@
       <workItem from="1651725785812" duration="600000" />
       <workItem from="1651765727609" duration="6847000" />
       <workItem from="1651854402861" duration="26000" />
-      <workItem from="1652114796226" duration="5418000" />
+      <workItem from="1652114796226" duration="5879000" />
+      <workItem from="1652201139251" duration="61000" />
+      <workItem from="1652201491180" duration="766000" />
+      <workItem from="1652242645667" duration="2000" />
+      <workItem from="1652288642817" duration="4648000" />
     </task>
     <servers />
   </component>
