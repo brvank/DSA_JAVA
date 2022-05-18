@@ -1,6 +1,7 @@
-package data_structure.non_linear.Graph;
+package data_structure.non_linear.GraphAdj;
 
 class Node<T> {
+    boolean visited;
     private T data;
     private int to;
     private Node<T> next;
@@ -9,6 +10,7 @@ class Node<T> {
         this.data = data;
         this.to = to;
         this.next = null;
+        this.visited = false;
     }
 
     public T getData() {

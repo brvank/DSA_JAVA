@@ -10,7 +10,7 @@ public class LinkedList<T>{
     }
 
     //add
-    public void addFront(T data){
+    public T addFront(T data){
         if(head == null){
             head = new Node<>(data);
         }else{
@@ -19,9 +19,10 @@ public class LinkedList<T>{
             head = temp;
         }
         count++;
+        return data;
     }
 
-    public void addLast(T data){
+    public T addLast(T data){
         if(head == null){
             head = new Node<>(data);
         }else{
@@ -32,9 +33,10 @@ public class LinkedList<T>{
             temp.setNext(new Node<>(data));
         }
         count++;
+        return data;
     }
 
-    public void add(int index, T data){
+    public T add(int index, T data){
         if(index >= 0 && index < count){
             if(index == 0){
                 addFront(data);
@@ -51,7 +53,9 @@ public class LinkedList<T>{
                 temp.setNext(temp2);
                 count++;
             }
+            return data;
         }
+        return null;
     }
 
     //get
