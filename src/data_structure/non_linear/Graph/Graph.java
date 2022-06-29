@@ -1,6 +1,7 @@
 package data_structure.non_linear.Graph;
 
 import data_structure.linear.LinkedList.LinkedList;
+import data_structure.linear.LinkedList.Node;
 
 /**
  <B>0 based indexing</B>
@@ -19,32 +20,34 @@ public class Graph<T, S> {
         return vertices;
     }
 
-    public void addVertex(T id){
-        vertices.addLast(new NodeP<T, S>(new DataP<T, S>(id)));
+    public NodeP<T, S> addVertex(T id){
+        Node<NodeP<T, S>> temp = vertices.getHead();
+        while(temp != null){
+            if(temp.getData().getData().getId() == id){
+                return temp.getData();
+            }
+            temp = temp.getNext();
+        }
+
+        NodeP<T, S> newNode = vertices.addLast(new NodeP<T, S>(new DataP<T, S>(id)));
+        return newNode;
     }
 
     public void addEdge(T from, T to, S weight){
-        NodeP<T, S> temp = vertices.getFront();
+        Node<NodeP<T, S>> temp = vertices.getHead();
         while(temp != null){
-            if(temp.getData().getId().equals(from)){
-                temp.getData().getEdges().addLast(new NodeC<T, S>(new DataC<T, S>(to, weight)));
+            if(temp.getData().getData().getId().equals(from)){
+                temp.getData().getData().getEdges().addLast(new NodeC<T, S>(new DataC<T, S>(to, weight)));
                 return;
             }
             temp = temp.getNext();
         }
-        temp = vertices.getLast();
-        NodeP<T, S> newNode = vertices.addLast(new NodeP<T, S>(new DataP<T, S>(from)));
+
+        NodeP<T, S> newNode = addVertex(from);
         newNode.getData().getEdges().addLast(new NodeC<T, S>(new DataC<T, S>(to, weight)));
-        temp.setNext(newNode);
     }
 
     public int getCountVertices(){
-        int len = 0;
-        NodeP<T, S> tempNodeP = vertices.getFront();
-        while(tempNodeP != null){
-            len++;
-            tempNodeP = tempNodeP.getNext();
-        }
         return vertices.length();
     }
 
@@ -52,13 +55,13 @@ public class Graph<T, S> {
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
 
-        NodeP<T, S> tempNodeP = vertices.getFront();
-        while(tempNodeP != null){
-            DataP<T, S> tempDataP = tempNodeP.getData();
+        Node<NodeP<T, S>> temp = vertices.getHead();
+        while(temp != null){
+            DataP<T, S> tempDataP = temp.getData().getData();
             stringBuilder.append(tempDataP.getId()).append("==>").append(tempDataP.toString());
             stringBuilder.append("\n");
-            tempNodeP = tempNodeP.getNext();
-            System.out.println("adding");
+
+            temp = temp.getNext();
         }
 
         return stringBuilder.toString();

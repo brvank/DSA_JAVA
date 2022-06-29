@@ -58,6 +58,10 @@ public class LinkedList<T>{
         return null;
     }
 
+    public Node<T> getHead(){
+        return head;
+    }
+
     //get
     public T getFront(){
         if(head == null) return null;

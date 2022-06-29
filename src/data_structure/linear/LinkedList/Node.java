@@ -1,6 +1,6 @@
 package data_structure.linear.LinkedList;
 
-class Node<T>{
+public class Node<T>{
     private T data;
     private Node<T> next;
 
