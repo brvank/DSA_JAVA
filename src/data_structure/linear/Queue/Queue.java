@@ -48,6 +48,14 @@ public class Queue<T> {
         }
     }
 
+    public T getLast(){
+        if(last == null){
+            return null;
+        }else{
+            return last.getData();
+        }
+    }
+
     public int length(){
         return count;
     }

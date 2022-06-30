@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b70215c-7691-4806-9508-0301e8ba93c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/VisitedState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/linear/Queue/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/linear/Queue/Queue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/NodeC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/NodeC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/NodeP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/NodeP.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -87,7 +91,8 @@
       <workItem from="1653748989417" duration="3978000" />
       <workItem from="1655449489945" duration="595000" />
       <workItem from="1656420577505" duration="5951000" />
-      <workItem from="1656500041357" duration="2353000" />
+      <workItem from="1656500041357" duration="10184000" />
+      <workItem from="1656560861615" duration="14332000" />
     </task>
     <servers />
   </component>

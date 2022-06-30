@@ -1,6 +1,7 @@
 package data_structure.non_linear.Graph;
 
 import data_structure.linear.LinkedList.LinkedList;
+import data_structure.linear.LinkedList.Node;
 
 /**
  @author ankit maurya
@@ -10,10 +11,12 @@ import data_structure.linear.LinkedList.LinkedList;
 public class NodeP<T, S> {
     private DataP<T, S> data;
     private NodeP<T, S> next;
+    private VisitedState visited;
 
     public NodeP(DataP<T, S> data) {
         this.data = data;
         this.next = null;
+        this.visited = VisitedState.NOT_VISITED;
     }
 
     public DataP<T, S> getData() {
@@ -30,6 +33,14 @@ public class NodeP<T, S> {
 
     public void setNext(NodeP<T, S> next) {
         this.next = next;
+    }
+
+    public VisitedState getVisited() {
+        return visited;
+    }
+
+    public void setVisited(VisitedState visited) {
+        this.visited = visited;
     }
 
     @Override
@@ -68,12 +79,23 @@ class DataP<T, S> {
         this.edges = edges;
     }
 
+    public void setVisitedState(VisitedState state) {
+        Node<NodeC<T, S>> temp = edges.getHead();
+        while(temp != null){
+            temp.getData().getData().setVisited(state);
+            temp = temp.getNext();
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        for(int i=0;i<edges.length();i++){
-            stringBuilder.append(edges.get(i).getData().toString());
-            if(i < edges.length() -1){
+        Node<NodeC<T, S>> temp = edges.getHead();
+        while(temp != null){
+            NodeC<T, S> tempNodeC = temp.getData();
+            stringBuilder.append(tempNodeC.getData().toString());
+            temp = temp.getNext();
+            if(temp != null){
                 stringBuilder.append(", ");
             }
         }

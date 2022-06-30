@@ -39,10 +39,12 @@ public class NodeC<T, S> {
 class DataC<T,S> {
     private T to;
     private S weight;
+    private VisitedState visited;
 
     public DataC(T to, S weight) {
         this.to = to;
         this.weight = weight;
+        this.visited = VisitedState.NOT_VISITED;
     }
 
     public T getTo() {
@@ -59,6 +61,14 @@ class DataC<T,S> {
 
     public void setWeight(S weight) {
         this.weight = weight;
+    }
+
+    public VisitedState getVisited() {
+        return visited;
+    }
+
+    public void setVisited(VisitedState visited) {
+        this.visited = visited;
     }
 
     @Override

@@ -36,7 +36,7 @@ public class LinkedList<T>{
         return data;
     }
 
-    public T add(int index, T data){
+    public T addAt(int index, T data){
         if(index >= 0 && index < count){
             if(index == 0){
                 addFront(data);
@@ -77,7 +77,7 @@ public class LinkedList<T>{
         return temp.getData();
     }
 
-    public T get(int index){
+    public T getFrom(int index){
         if(index >= 0 && index < count){
             if(index == 0){
                 return getFront();
@@ -126,7 +126,7 @@ public class LinkedList<T>{
         }
     }
 
-    public void remove(int index){
+    public void removeFrom(int index){
         if(index >= 0 && index < count){
             if(index == 0){
                 removeFront();
@@ -146,6 +146,19 @@ public class LinkedList<T>{
                 }
                 count--;
             }
+        }
+    }
+
+    public void remove(T data){
+        Node<T> temp = head;
+        int index = 0;
+        while(temp != null){
+            if(temp.getData().equals(data)){
+                removeFrom(index);
+                return;
+            }
+            index++;
+            temp = temp.getNext();
         }
     }
 
@@ -169,3 +182,20 @@ public class LinkedList<T>{
         }
     }
 }
+
+//test
+/*
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.addLast(10);
+        linkedList.addLast(11);
+        linkedList.addLast(12);
+        linkedList.addLast(13);
+        linkedList.addLast(14);
+        linkedList.addLast(15);
+        linkedList.addLast(16);
+        System.out.println(linkedList);
+        linkedList.remove(10);
+        System.out.println(linkedList);
+        linkedList.remove(13);
+        System.out.println(linkedList);
+ */
