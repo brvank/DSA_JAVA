@@ -1,31 +1,37 @@
+import algorithm.sorting.BubbleSort;
+import algorithm.sorting.Comparator;
 import data_structure.linear.LinkedList.LinkedList;
 import data_structure.non_linear.Graph.Graph;
 import data_structure.non_linear.GraphAdj.GraphAdj;
+
+import java.util.ArrayList;
 
 
 public class Main {
     public static void main(String[] args) {
 
-        Graph<Integer, Integer> graph = new Graph<>();
-        graph.addVertex(0);
-        graph.addEdge(0,2,1);
-        graph.addEdge(0,1,1);
-        graph.addVertex(1);
-        graph.addEdge(1,2,1);
-        graph.addVertex(2);
-        graph.addVertex(2);
-        graph.addEdge(2,3,1);
-        graph.addEdge(2,4,1);
-        graph.addVertex(3);
-        graph.addEdge(3,2,1);
-        graph.addEdge(4,1,1);
-        graph.addEdge(4,3,1);
+        ArrayList<Integer> linkedList = new ArrayList<>();
+        linkedList.add(18);
+        linkedList.add(11);
+        linkedList.add(12);
+        linkedList.add(13);
+        linkedList.add(14);
+        linkedList.add(15);
+        linkedList.add(16);
+        linkedList.add(17);
+        linkedList.add(10);
+        System.out.println(linkedList);
 
-        System.out.println(graph);
+        BubbleSort<Integer> bubbleSort = new BubbleSort<>(new Comparator<Integer>() {
+            @Override
+            public boolean compare(Integer t1, Integer t2) {
+                return t1 > t2;
+            }
+        });
 
-        graph.dft(3);
+        bubbleSort.sort(linkedList);
 
-        graph.bft(4);
+        System.out.println(linkedList);
 
     }
 }

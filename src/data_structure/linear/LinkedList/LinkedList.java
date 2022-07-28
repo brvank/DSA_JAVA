@@ -77,7 +77,7 @@ public class LinkedList<T>{
         return temp.getData();
     }
 
-    public T getFrom(int index){
+    public T get(int index){
         if(index >= 0 && index < count){
             if(index == 0){
                 return getFront();
@@ -93,6 +93,18 @@ public class LinkedList<T>{
             }
         }else{
             return null;
+        }
+    }
+
+    //edit
+    public void set(int index, T data){
+        if(index >= 0 && index < count){
+            Node<T> temp = head;
+            while(index>0){
+                temp = temp.getNext();
+                index--;
+            }
+            temp.setData(data);
         }
     }
 
