@@ -228,3 +228,31 @@ public class Graph<T, S> {
         return stringBuilder.toString();
     }
 }
+
+//test
+/*
+        Graph<Integer, Integer> graph = new Graph<>();
+        graph.addVertex(0);
+        graph.addEdge(0,2,1);
+        graph.addEdge(0,1,1);
+        graph.addVertex(1);
+        graph.addEdge(1,2,1);
+        graph.addVertex(2);
+        graph.addVertex(2);
+        graph.addEdge(2,3,1);
+        graph.addEdge(2,4,1);
+        graph.addVertex(3);
+        graph.addEdge(3,2,1);
+        graph.addEdge(4,1,1);
+        graph.addEdge(4,3,1);
+
+        System.out.println(graph);
+
+        graph.dft();
+        System.out.println();
+        graph.dft(3);
+        System.out.println();
+
+        graph.bft(4);
+        System.out.println();
+ */
