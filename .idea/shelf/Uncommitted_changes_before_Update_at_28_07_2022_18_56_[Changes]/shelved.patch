@@ -1,0 +1,221 @@
+Index: src/algorithm/sorting/BubbleSort.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package algorithm.sorting;\r\n\r\nimport data_structure.linear.LinkedList.LinkedList;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class BubbleSort<T> {\r\n\r\n    public Comparator<T> comparator;\r\n\r\n    public BubbleSort(Comparator<T> comparator){\r\n        this.comparator = comparator;\r\n    }\r\n\r\n    public int sort(LinkedList<T> linkedList){\r\n        try{\r\n            //bubble sort algorithm\r\n            for(int i=0;i< linkedList.length()-1;i++){\r\n                boolean check = true;\r\n                for(int j=0;j< linkedList.length() - i - 1;j++){\r\n                    if(!comparator.compare(linkedList.get(j), linkedList.get(j+1))){\r\n                        check = false;\r\n                        //swap\r\n                        T j1 = linkedList.get(j);\r\n                        T j2 = linkedList.get(j+1);\r\n                        linkedList.set(j, j2);\r\n                        linkedList.set(j+1, j1);\r\n                    }\r\n                }\r\n                if(check){\r\n                    return 1;\r\n                }\r\n            }\r\n            return 1;\r\n        }catch (Exception e){\r\n            return 0;\r\n        }\r\n    }\r\n\r\n    public int sort(ArrayList<T> arrayList){\r\n        try{\r\n            //bubble sort algorithm\r\n            for(int i=0;i< arrayList.size()-1;i++){\r\n                boolean check = true;\r\n                for(int j=0;j< arrayList.size() - i - 1;j++){\r\n                    if(!comparator.compare(arrayList.get(j), arrayList.get(j+1))){\r\n                        check = false;\r\n                        //swap\r\n                        T j1 = arrayList.get(j);\r\n                        T j2 = arrayList.get(j+1);\r\n                        arrayList.set(j, j2);\r\n                        arrayList.set(j+1, j1);\r\n                    }\r\n                }\r\n                if(check){\r\n                    return 1;\r\n                }\r\n            }\r\n            return 1;\r\n        }catch (Exception e){\r\n            return 0;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/algorithm/sorting/BubbleSort.java b/src/algorithm/sorting/BubbleSort.java
+--- a/src/algorithm/sorting/BubbleSort.java	(revision bf0680b887ddd5747d834537628d8c9d2a0437e0)
++++ b/src/algorithm/sorting/BubbleSort.java	(date 1659013693815)
+@@ -4,27 +4,26 @@
+ 
+ import java.util.ArrayList;
+ 
+-public class BubbleSort<T> {
+-
+-    public Comparator<T> comparator;
++public class BubbleSort<T> extends Sort<T> {
+ 
+     public BubbleSort(Comparator<T> comparator){
+-        this.comparator = comparator;
++        super(comparator);
+     }
+ 
+-    public int sort(LinkedList<T> linkedList){
++    @Override
++    public int sort(ArrayList<T> arrayList) {
+         try{
+             //bubble sort algorithm
+-            for(int i=0;i< linkedList.length()-1;i++){
++            for(int i=0;i< arrayList.size()-1;i++){
+                 boolean check = true;
+-                for(int j=0;j< linkedList.length() - i - 1;j++){
+-                    if(!comparator.compare(linkedList.get(j), linkedList.get(j+1))){
++                for(int j=0;j< arrayList.size() - i - 1;j++){
++                    if(!comparator.compare(arrayList.get(j), arrayList.get(j+1))){
+                         check = false;
+                         //swap
+-                        T j1 = linkedList.get(j);
+-                        T j2 = linkedList.get(j+1);
+-                        linkedList.set(j, j2);
+-                        linkedList.set(j+1, j1);
++                        T j1 = arrayList.get(j);
++                        T j2 = arrayList.get(j+1);
++                        arrayList.set(j, j2);
++                        arrayList.set(j+1, j1);
+                     }
+                 }
+                 if(check){
+@@ -37,19 +36,20 @@
+         }
+     }
+ 
+-    public int sort(ArrayList<T> arrayList){
++    @Override
++    public int sort(LinkedList<T> linkedList) {
+         try{
+             //bubble sort algorithm
+-            for(int i=0;i< arrayList.size()-1;i++){
++            for(int i=0;i< linkedList.length()-1;i++){
+                 boolean check = true;
+-                for(int j=0;j< arrayList.size() - i - 1;j++){
+-                    if(!comparator.compare(arrayList.get(j), arrayList.get(j+1))){
++                for(int j=0;j< linkedList.length() - i - 1;j++){
++                    if(!comparator.compare(linkedList.get(j), linkedList.get(j+1))){
+                         check = false;
+                         //swap
+-                        T j1 = arrayList.get(j);
+-                        T j2 = arrayList.get(j+1);
+-                        arrayList.set(j, j2);
+-                        arrayList.set(j+1, j1);
++                        T j1 = linkedList.get(j);
++                        T j2 = linkedList.get(j+1);
++                        linkedList.set(j, j2);
++                        linkedList.set(j+1, j1);
+                     }
+                 }
+                 if(check){
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import algorithm.sorting.BubbleSort;\r\nimport algorithm.sorting.Comparator;\r\nimport data_structure.linear.LinkedList.LinkedList;\r\nimport data_structure.non_linear.Graph.Graph;\r\nimport data_structure.non_linear.GraphAdj.GraphAdj;\r\n\r\nimport java.util.ArrayList;\r\n\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n\r\n        ArrayList<Integer> linkedList = new ArrayList<>();\r\n        linkedList.add(18);\r\n        linkedList.add(11);\r\n        linkedList.add(12);\r\n        linkedList.add(13);\r\n        linkedList.add(14);\r\n        linkedList.add(15);\r\n        linkedList.add(16);\r\n        linkedList.add(17);\r\n        linkedList.add(10);\r\n        System.out.println(linkedList);\r\n\r\n        BubbleSort<Integer> bubbleSort = new BubbleSort<>(new Comparator<Integer>() {\r\n            @Override\r\n            public boolean compare(Integer t1, Integer t2) {\r\n                return t1 > t2;\r\n            }\r\n        });\r\n\r\n        bubbleSort.sort(linkedList);\r\n\r\n        System.out.println(linkedList);\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision bf0680b887ddd5747d834537628d8c9d2a0437e0)
++++ b/src/Main.java	(date 1659013693894)
+@@ -1,5 +1,6 @@
+ import algorithm.sorting.BubbleSort;
+ import algorithm.sorting.Comparator;
++import algorithm.sorting.Sort;
+ import data_structure.linear.LinkedList.LinkedList;
+ import data_structure.non_linear.Graph.Graph;
+ import data_structure.non_linear.GraphAdj.GraphAdj;
+@@ -22,7 +23,7 @@
+         linkedList.add(10);
+         System.out.println(linkedList);
+ 
+-        BubbleSort<Integer> bubbleSort = new BubbleSort<>(new Comparator<Integer>() {
++        Sort<Integer> bubbleSort = new BubbleSort<>(new Comparator<Integer>() {
+             @Override
+             public boolean compare(Integer t1, Integer t2) {
+                 return t1 > t2;
+Index: src/algorithm/sorting/Sort.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package algorithm.sorting;public interface Sort {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/algorithm/sorting/Sort.java b/src/algorithm/sorting/Sort.java
+--- a/src/algorithm/sorting/Sort.java	(revision bf0680b887ddd5747d834537628d8c9d2a0437e0)
++++ b/src/algorithm/sorting/Sort.java	(date 1659013693861)
+@@ -1,2 +1,18 @@
+-package algorithm.sorting;public interface Sort {
++package algorithm.sorting;
++
++import data_structure.linear.LinkedList.LinkedList;
++
++import java.util.ArrayList;
++
++public abstract class Sort<T> {
++
++    public Comparator<T> comparator;
++
++    public Sort(Comparator<T> comparator){
++        this.comparator = comparator;
++    }
++
++    //sorting methods for different data structures
++    public abstract int sort(ArrayList<T> arrayList);
++    public abstract int sort(LinkedList<T> linkedList);
+ }
+Index: src/algorithm/sorting/SelectionSort.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package algorithm.sorting;public class SelectionSort {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/algorithm/sorting/SelectionSort.java b/src/algorithm/sorting/SelectionSort.java
+--- a/src/algorithm/sorting/SelectionSort.java	(revision bf0680b887ddd5747d834537628d8c9d2a0437e0)
++++ b/src/algorithm/sorting/SelectionSort.java	(date 1659013693924)
+@@ -1,2 +1,32 @@
+-package algorithm.sorting;public class SelectionSort {
++package algorithm.sorting;
++
++import data_structure.linear.LinkedList.LinkedList;
++
++import java.util.ArrayList;
++
++public class SelectionSort<T> extends Sort<T>{
++
++    public SelectionSort(Comparator<T> comparator){
++        super(comparator);
++    }
++
++    @Override
++    public int sort(ArrayList<T> arrayList) {
++        try{
++            return 1;
++        }catch (Exception e){
++            return 0;
++        }
++    }
++
++    @Override
++    public int sort(LinkedList<T> linkedList) {
++        try{
++            return 1;
++        }catch (Exception e){
++            return 0;
++        }
++    }
++
++
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2b70215c-7691-4806-9508-0301e8ba93c5\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/algorithm/sorting/BubbleSort.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/algorithm/sorting/Comparator.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/data_structure/non_linear/Graph/Graph.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/data_structure/non_linear/Graph/Graph.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"Interface\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"28hxW7fwOIaQz5XU39IJdF7tTK3\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"AndroidSdkUpdater\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"mysql\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"DSA\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"2b70215c-7691-4806-9508-0301e8ba93c5\" name=\"Changes\" comment=\"\" />\r\n      <created>1651682656955</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1651682656955</updated>\r\n      <workItem from=\"1651682676435\" duration=\"2619000\" />\r\n      <workItem from=\"1651725785812\" duration=\"600000\" />\r\n      <workItem from=\"1651765727609\" duration=\"6847000\" />\r\n      <workItem from=\"1651854402861\" duration=\"26000\" />\r\n      <workItem from=\"1652114796226\" duration=\"5879000\" />\r\n      <workItem from=\"1652201139251\" duration=\"61000\" />\r\n      <workItem from=\"1652201491180\" duration=\"766000\" />\r\n      <workItem from=\"1652242645667\" duration=\"2000\" />\r\n      <workItem from=\"1652288642817\" duration=\"4834000\" />\r\n      <workItem from=\"1652462178379\" duration=\"1595000\" />\r\n      <workItem from=\"1652715879954\" duration=\"35000\" />\r\n      <workItem from=\"1652890774928\" duration=\"8365000\" />\r\n      <workItem from=\"1653375818452\" duration=\"51000\" />\r\n      <workItem from=\"1653748989417\" duration=\"3978000\" />\r\n      <workItem from=\"1655449489945\" duration=\"595000\" />\r\n      <workItem from=\"1656420577505\" duration=\"5951000\" />\r\n      <workItem from=\"1656500041357\" duration=\"10184000\" />\r\n      <workItem from=\"1656560861615\" duration=\"16235000\" />\r\n      <workItem from=\"1657894818846\" duration=\"713000\" />\r\n      <workItem from=\"1658676131706\" duration=\"4681000\" />\r\n      <workItem from=\"1658742747027\" duration=\"60000\" />\r\n      <workItem from=\"1659011164008\" duration=\"702000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision bf0680b887ddd5747d834537628d8c9d2a0437e0)
++++ b/.idea/workspace.xml	(date 1659014755782)
+@@ -2,12 +2,11 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="2b70215c-7691-4806-9508-0301e8ba93c5" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/algorithm/sorting/BubbleSort.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/algorithm/sorting/Comparator.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/algorithm/sorting/SelectionSort.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/algorithm/sorting/Sort.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/non_linear/Graph/Graph.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/algorithm/sorting/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithm/sorting/BubbleSort.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -20,6 +19,7 @@
+         <option value="Enum" />
+         <option value="Class" />
+         <option value="Interface" />
++        <option value="AnnotationType" />
+       </list>
+     </option>
+   </component>
+@@ -95,7 +95,7 @@
+       <workItem from="1657894818846" duration="713000" />
+       <workItem from="1658676131706" duration="4681000" />
+       <workItem from="1658742747027" duration="60000" />
+-      <workItem from="1659011164008" duration="702000" />
++      <workItem from="1659011164008" duration="3355000" />
+     </task>
+     <servers />
+   </component>

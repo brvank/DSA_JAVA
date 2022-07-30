@@ -45,14 +45,16 @@ public class Stack<T> {
     public String toString(){
         StringBuilder stringBuilder = new StringBuilder();
         if(top == null){
-            return "";
+            return "[]";
         }else{
+            stringBuilder.append("[");
             Node<T> temp = top;
             while(temp.getNext() != null){
                 stringBuilder.append(temp.getData()).append(", ");
                 temp = temp.getNext();
             }
             stringBuilder.append(temp.getData());
+            stringBuilder.append("]");
             return stringBuilder.toString();
         }
     }

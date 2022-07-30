@@ -10,6 +10,10 @@ public class LinkedList<T>{
     }
 
     //add
+    public T add(T data){
+        return addFront(data);
+    }
+
     public T addFront(T data){
         if(head == null){
             head = new Node<>(data);
@@ -182,14 +186,16 @@ public class LinkedList<T>{
     public String toString(){
         StringBuilder stringBuilder = new StringBuilder();
         if(head == null){
-            return "";
+            return "[]";
         }else{
+            stringBuilder.append("[");
             Node<T> temp = head;
             while(temp.getNext() != null){
                 stringBuilder.append(temp.getData()).append(", ");
                 temp = temp.getNext();
             }
             stringBuilder.append(temp.getData());
+            stringBuilder.append("]");
             return stringBuilder.toString();
         }
     }
