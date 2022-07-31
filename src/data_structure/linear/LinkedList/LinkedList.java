@@ -11,7 +11,7 @@ public class LinkedList<T>{
 
     //add
     public T add(T data){
-        return addFront(data);
+        return addLast(data);
     }
 
     public T addFront(T data){
@@ -178,7 +178,7 @@ public class LinkedList<T>{
         }
     }
 
-    public int length(){
+    public int size(){
         return count;
     }
 

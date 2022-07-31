@@ -32,6 +32,7 @@ public class BubbleSort<T> extends Sort<T> {
             }
             return 1;
         }catch (Exception e){
+            e.printStackTrace();
             return 0;
         }
     }
@@ -40,9 +41,9 @@ public class BubbleSort<T> extends Sort<T> {
     public int sort(LinkedList<T> linkedList) {
         try{
             //bubble sort algorithm
-            for(int i=0;i< linkedList.length()-1;i++){
+            for(int i = 0; i< linkedList.size()-1; i++){
                 boolean check = true;
-                for(int j=0;j< linkedList.length() - i - 1;j++){
+                for(int j = 0; j< linkedList.size() - i - 1; j++){
                     if(comparator.compare(linkedList.get(j), linkedList.get(j+1))){
                         check = false;
                         //swap
@@ -58,6 +59,7 @@ public class BubbleSort<T> extends Sort<T> {
             }
             return 1;
         }catch (Exception e){
+            e.printStackTrace();
             return 0;
         }
     }

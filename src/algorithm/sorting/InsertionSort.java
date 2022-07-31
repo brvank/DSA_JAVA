@@ -24,6 +24,7 @@ public class InsertionSort<T> extends Sort<T>{
             }
             return 1;
         }catch (Exception e){
+            e.printStackTrace();
             return 0;
         }
     }
@@ -31,7 +32,7 @@ public class InsertionSort<T> extends Sort<T>{
     @Override
     public int sort(LinkedList<T> linkedList) {
         try{
-            for(int i=0;i<linkedList.length();i++){
+            for(int i = 0; i<linkedList.size(); i++){
                 T key = linkedList.get(i);
                 int j = i-1;
                 while(j>=0 && comparator.compare(key, linkedList.get(j))){
@@ -42,6 +43,7 @@ public class InsertionSort<T> extends Sort<T>{
             }
             return 1;
         }catch (Exception e){
+            e.printStackTrace();
             return 0;
         }
     }

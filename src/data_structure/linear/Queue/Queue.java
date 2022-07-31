@@ -56,7 +56,7 @@ public class Queue<T> {
         }
     }
 
-    public int length(){
+    public int size(){
         return count;
     }
 

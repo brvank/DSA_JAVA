@@ -61,7 +61,7 @@ public class Graph<T, S> {
     }
 
     public int getCountVertices(){
-        return vertices.length();
+        return vertices.size();
     }
 
     public void dft(){
@@ -73,7 +73,7 @@ public class Graph<T, S> {
             Stack<T> stack = new Stack<>();
             stack.push(temp.getData().getData().getId());
 
-            while(stack.length() > 0){
+            while(stack.size() > 0){
                 T data = stack.getTop();
                 visitedNodes.add(data);
                 stack.pop();
@@ -105,7 +105,7 @@ public class Graph<T, S> {
             Stack<T> stack = new Stack<>();
             stack.push(temp.getData().getId());
 
-            while(stack.length() > 0){
+            while(stack.size() > 0){
                 T data = stack.getTop();
                 visitedNodes.add(data);
                 stack.pop();
@@ -137,7 +137,7 @@ public class Graph<T, S> {
             Queue<T> queue = new Queue<>();
             queue.enqueue(temp.getData().getData().getId());
 
-            while(queue.length() > 0){
+            while(queue.size() > 0){
                 T data = queue.getLast();
                 visitedNodes.add(data);
                 queue.dequeue();
@@ -169,7 +169,7 @@ public class Graph<T, S> {
             Queue<T> queue = new Queue<>();
             queue.enqueue(temp.getData().getId());
 
-            while(queue.length() > 0){
+            while(queue.size() > 0){
                 T data = queue.getLast();
                 visitedNodes.add(data);
                 queue.dequeue();

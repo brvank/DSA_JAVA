@@ -37,7 +37,7 @@ public class Stack<T> {
         }
     }
 
-    public int length(){
+    public int size(){
         return count;
     }
 

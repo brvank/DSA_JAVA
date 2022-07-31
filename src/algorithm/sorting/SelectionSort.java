@@ -29,6 +29,7 @@ public class SelectionSort<T> extends Sort<T>{
             }
             return 1;
         }catch (Exception e){
+            e.printStackTrace();
             return 0;
         }
     }
@@ -36,9 +37,9 @@ public class SelectionSort<T> extends Sort<T>{
     @Override
     public int sort(LinkedList<T> linkedList) {
         try{
-            for(int i=0;i<linkedList.length();i++){
+            for(int i = 0; i<linkedList.size(); i++){
                 int min = i;
-                for(int j=i+1;j<linkedList.length();j++){
+                for(int j = i+1; j<linkedList.size(); j++){
                     if(comparator.compare(linkedList.get(min), linkedList.get(j))){
                         min = j;
                     }
@@ -52,6 +53,7 @@ public class SelectionSort<T> extends Sort<T>{
             }
             return 1;
         }catch (Exception e){
+            e.printStackTrace();
             return 0;
         }
     }
