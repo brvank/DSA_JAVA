@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b70215c-7691-4806-9508-0301e8ba93c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/algorithm/sorting/InsertionSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithm/sorting/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithm/sorting/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithm/sorting/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithm/sorting/SelectionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithm/sorting/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithm/sorting/Sort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/linear/LinkedList/LinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +15,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -96,7 +93,8 @@
       <workItem from="1657894818846" duration="713000" />
       <workItem from="1658676131706" duration="4681000" />
       <workItem from="1658742747027" duration="60000" />
-      <workItem from="1659011164008" duration="6234000" />
+      <workItem from="1659011164008" duration="6570000" />
+      <workItem from="1659251016693" duration="1482000" />
     </task>
     <servers />
   </component>

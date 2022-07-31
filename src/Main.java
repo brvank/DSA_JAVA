@@ -1,7 +1,4 @@
-import algorithm.sorting.BubbleSort;
-import algorithm.sorting.Comparator;
-import algorithm.sorting.SelectionSort;
-import algorithm.sorting.Sort;
+import algorithm.sorting.*;
 import data_structure.linear.LinkedList.LinkedList;
 import data_structure.non_linear.Graph.Graph;
 import data_structure.non_linear.GraphAdj.GraphAdj;
@@ -19,16 +16,16 @@ public class Main {
         arrayList.add(12);
         arrayList.add(13);
         arrayList.add(14);
-        arrayList.add(15);
+        arrayList.add(-9);
         arrayList.add(16);
         arrayList.add(17);
         arrayList.add(10);
         System.out.println(arrayList);
 
-        Sort<Integer> integerSort = new SelectionSort<>(new Comparator<Integer>() {
+        Sort<Integer> integerSort = new InsertionSort<>(new Comparator<Integer>() {
             @Override
             public boolean compare(Integer t1, Integer t2) {
-                return t1 > t2;
+                return t1 < t2;
             }
         });
 
