@@ -229,6 +229,8 @@ public class Graph<T, S> {
     }
 }
 
+//TODO: algorithm to remove the vertex or edges
+
 //test
 /*
         Graph<Integer, Integer> graph = new Graph<>();

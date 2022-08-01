@@ -13,7 +13,6 @@ public class BubbleSort<T> extends Sort<T> {
     @Override
     public int sort(ArrayList<T> arrayList) {
         try{
-            //bubble sort algorithm
             for(int i=0;i< arrayList.size()-1;i++){
                 boolean check = true;
                 for(int j=0;j< arrayList.size() - i - 1;j++){
@@ -40,7 +39,6 @@ public class BubbleSort<T> extends Sort<T> {
     @Override
     public int sort(LinkedList<T> linkedList) {
         try{
-            //bubble sort algorithm
             for(int i = 0; i< linkedList.size()-1; i++){
                 boolean check = true;
                 for(int j = 0; j< linkedList.size() - i - 1; j++){
